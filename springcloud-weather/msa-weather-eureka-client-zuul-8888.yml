@@ -1,0 +1,16 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: msa-weather-eureka-client-zuul
+zuul:
+  prefix: /haotian
+  ignored-patterns: "*"
+  routes: 
+    city: 
+      path: /city/**
+      service-id: msa-weather-city-eureka
+    weather:
+      path: /weather/**
+      service-id: msa-weather-data-eureka
+      
