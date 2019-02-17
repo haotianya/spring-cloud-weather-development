@@ -5,7 +5,6 @@ spring:
     name: msa-weather-eureka-client-zuul
 zuul:
   prefix: /haotian
-  ignored-patterns: "*"
   routes: 
     city: 
       path: /city/**
