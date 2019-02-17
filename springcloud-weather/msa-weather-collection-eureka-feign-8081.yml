@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: msa-weather-collection-eureka-fegin
+  datasource:
+    username: root
+    password: sgcgjn
+    url: jdbc:mysql://localhost:3306/blog?characterEncoding=UTF-8&useSSL=true
+    driver-class-name: com.mysql.cj.jdbc.Driver   
+feign:
+  client: 
+    config: 
+      feginName:
+        connectTimeout: 5000
+        readTimeout: 5000
+eureka: 
+  client:
+    service-url: 
+      defaultZone: http://localhost:8761/eureka/        
