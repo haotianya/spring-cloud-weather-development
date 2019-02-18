@@ -3,9 +3,12 @@ server:
 spring:
   application:
     name: msa-weather-eureka-client-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
 zuul:
   prefix: /haotian
-  ignored-patterns: "*"
   routes: 
     city: 
       path: /city/**
